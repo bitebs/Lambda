@@ -1,0 +1,77 @@
+.card{
+           width: 60%;
+            box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.24);
+            transition: box-shadow 0.2s;
+            margin: 0 auto;
+        }
+        .card:hover{
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+        }
+        .container{
+            display: flex;
+            height: 120vh;
+            width: 100%;
+            font-size: 20px;
+            justify-content: start;
+            padding: 4px;
+        }
+        .sidebar{
+            width: 30%;
+            border-radius: 0 70px 0 0;
+        }
+        .main{
+            width: 60%;
+            padding: 12px;
+        }
+        .face{
+            width: 150px;
+            height: 150px;
+            margin: 16px;
+        }
+        .email,.tel,.geo{
+            font-family: Sours Sans Pro;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0 0.5em 0.5em 0.5em;
+        }
+        .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+h4 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Source Sans Pro;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Source Sans Pro;
+}
+h4,
+        h5 {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+        }
+
+        p {
+            margin-block-start: 0.1em;
+            margin-block-end: 0.1em;
+        }
+        .edu {
+    margin: 0 0.5em 0.5em 0.5em;
+}
+  .edu-content {
+            margin-left: 20px;
+        }
+        ul{
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+}
+li{
+    font-family: Source Sans Pro;
+    list-style-type: none;
+}
