@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/chai.min.js"></script>
+    <script src="js/mocha.min.js"></script>
+    <link rel="stylesheet" href="css/mocha.min.css">
+</head>
+<body>
+    <pre>
+    Your coworker was supposed to write a simple helper function to capitalize a string 
+       (that contains a single word) before they went on vacation.
+       Unfortunately, they have now left and the code they gave you doesn't work. Fix the 
+    helper function they wrote so that it works as intended 
+       (i.e. make the first character in the string "word" upper case).
+     Don't worry about numbers, special characters, or non-string types being passed to the function. 
+    The string lengths will be from 1 character up to 10 characters, but will never be empty. 
+     </pre>
+     <div id="mocha"></div>
+    <script>
+        var word='word';
+        console.log(capitalizeWord(word));
+        function capitalizeWord(word) {
+        word=word.charAt(0).toUpperCase()+word.slice(1);
+        return word;
+        }
+        mocha.setup('bdd');
+        const assert=chai.assert;
+        chai.config.truncateThreshold=0;
+
+        describe("Test of capitalize", ()=>{
+            it("Test 1", ()=>{
+                assert.strictEqual(capitalizeWord('word'), 'Word');
+                assert.strictEqual(capitalizeWord('i'), 'I');
+                assert.strictEqual(capitalizeWord('glasswear'), 'Glasswear');
+            })
+        })
+        mocha.run();
+    </script>
+</body>
+</html>

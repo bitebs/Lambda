@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Characters</title>
+    <script src="js/chai.min.js"></script>
+    <script src="js/mocha.min.js"></script>
+    <link rel="stylesheet" href="css/mocha.min.css">
+</head>
+<body>
+    <pre>
+    You are going to be given a word. Your job is to return the middle character of the word. 
+    If the word's length is odd, return the middle character. 
+    If the word's length is even, return the middle 2 characters.
+     #Examples:
+      Kata.getMiddle("test") should return "es"
+      Kata.getMiddle("testing") should return "t"
+      Kata.getMiddle("middle") should return "dd"
+      Kata.getMiddle("A") should return "A" 
+     </pre>
+     <div id="mocha"></div>
+    <script>
+
+        var s='tests';
+        console.log(getMiddle(s));
+        function getMiddle(s){
+            var length=s.length;
+            if(length%2==0)
+        return s.charAt(s.length/2-1)+s.charAt(s.length/2);
+        else
+        return s.charAt(length/2);
+     }
+        
+        mocha.setup('bdd');
+        const assert=chai.assert;
+        chai.config.truncateThreshold=0;
+
+        describe("Test of middle of the word", ()=>{
+            it("Test 1", ()=>{
+                assert.strictEqual(getMiddle("test"),"es");
+                assert.strictEqual(getMiddle("testing"),"t");
+                assert.strictEqual(getMiddle("middle"),"dd");
+                assert.strictEqual(getMiddle("A"),"A");
+            })
+            it("Test 2", ()=>{
+                assert.strictEqual(getMiddle("test"),"es");
+                assert.strictEqual(getMiddle("testing"),"t");
+                assert.strictEqual(getMiddle("middle"),"dd");
+                assert.strictEqual(getMiddle("A"),"A");
+            })
+        })
+        mocha.run();
+        
+    </script>
+</body>
+</html>
